@@ -31,13 +31,13 @@ function Dropdown({ label, links }: { label: string; links: { label: string; hre
         </svg>
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-64 bg-[#111b2e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
+        <div className="absolute top-full left-0 pt-2 w-64 z-50"><div className="bg-[#111b2e] border border-white/10 rounded-lg shadow-xl py-2">
           {links.map(link => (
             <Link key={link.href} href={link.href} className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
               {link.label}
             </Link>
           ))}
-        </div>
+        </div></div>
       )}
     </div>
   );
