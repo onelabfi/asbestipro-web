@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import { Editable } from '@/components/Editable';
 
+function citySlug(name: string) {
+  return name.toLowerCase().replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a');
+}
+
 const pricingTiers = [
   { area: 'PK-seutu (Helsinki, Espoo, Vantaa)', price: '119€', cities: ['Helsinki', 'Espoo', 'Vantaa'] },
   { area: 'Lähialue', price: '199€', cities: ['Vihti', 'Lohja', 'Kirkkonummi', 'Klaukkala', 'Nurmijärvi', 'Järvenpää', 'Sipoo', 'Kerava', 'Tuusula', 'Hyvinkää', 'Riihimäki', 'Porvoo'] },
@@ -27,7 +31,9 @@ export function PricingPage() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {tier.cities.map(city => (
-                  <span key={city} className="text-xs bg-white/5 text-gray-400 px-3 py-1 rounded-full">{city}</span>
+                  <Link key={city} href={`/${citySlug(city)}`} className="text-xs bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 px-3 py-1.5 rounded-full transition-colors">
+                    {city}
+                  </Link>
                 ))}
               </div>
             </div>
