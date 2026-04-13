@@ -15,16 +15,15 @@ export function HeroSection() {
           className="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4"
         />
 
-        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSekpTpQe6DNlmszYYyU8SOIQin-mF4qvVz_bLG38LNG97H3jw/viewanalytics?pli=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8 hover:bg-white/10 transition-colors"
+        >
           <span className="w-2 h-2 bg-green-500 rounded-full" />
-          <Editable
-            id="home.hero.badge"
-            defaultContent="98% asiakkaistamme suosittelisi meitä"
-            page="home"
-            as="span"
-            className="text-xs uppercase tracking-wider text-gray-300"
-          />
-        </div>
+          <span className="text-xs uppercase tracking-wider text-gray-300">98% asiakkaistamme suosittelisi meitä</span>
+        </a>
 
         <Editable
           id="home.hero.title"
@@ -49,12 +48,7 @@ export function HeroSection() {
           className="text-gray-400 text-lg mt-8 max-w-2xl mx-auto"
         />
 
-        <div className="mt-8">
-          <span className="text-blue-500 text-4xl sm:text-5xl font-bold">alkaen 119€</span>
-          <span className="text-gray-400 ml-2">sis. alv</span>
-        </div>
-
-        <div className="flex justify-center gap-4 mt-8">
+        <div className="flex justify-center gap-4 mt-10">
           <Link href="/tilaa" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-lg transition-colors text-lg">
             Tilaa kartoitus
           </Link>

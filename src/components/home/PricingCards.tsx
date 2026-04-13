@@ -48,9 +48,9 @@ export function PricingCards() {
                 </li>
               ))}
             </ul>
-            <Link href="/tilaa" className="block bg-white/5 border border-white/10 hover:bg-white/10 text-white text-center font-medium py-3.5 rounded-lg transition-colors">
+            <a href="https://kartoittaja.fi" target="_blank" rel="noopener noreferrer" className="block bg-white/5 border border-white/10 hover:bg-white/10 text-white text-center font-medium py-3.5 rounded-lg transition-colors">
               Tilaa näyteanalyysi
-            </Link>
+            </a>
           </div>
         </div>
       </div>
