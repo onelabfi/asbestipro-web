@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const palvelutLinks = [
   { label: 'Asbestikartoitus', href: '/asbestikartoitus' },
-  { label: 'Asbestinäyte', href: '/asbestinaytte' },
+  { label: 'Asbestinäyte', href: '/asbestinayte' },
   { label: 'Hinnasto', href: '/hinnasto' },
   { label: 'Asbestikartoitus hinta', href: '/asbestikartoitus-hinta' },
   { label: 'Luotettavuus', href: '/luotettavuus' },
@@ -15,7 +15,7 @@ const tietopankkiLinks = [
   { label: 'Mikä on asbestikartoitus?', href: '/tietopankki/mika-on-asbestikartoitus' },
   { label: 'Missä asbestia esiintyy?', href: '/tietopankki/missa-asbestia-esiintyy' },
   { label: 'Asbestilainsäädäntö', href: '/tietopankki/asbestilainsaadanto' },
-  { label: 'Asbestinäyte itse', href: '/tietopankki/asbestinaytte-itse' },
+  { label: 'Asbestinäyte itse', href: '/tietopankki/asbestinayte-itse' },
   { label: 'Kaikki artikkelit', href: '/tietopankki/artikkelit' },
 ];
 
