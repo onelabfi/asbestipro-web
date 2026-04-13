@@ -38,8 +38,14 @@ export function ContentProvider({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const editParam = params.get('edit') === '1';
+    const editStored = localStorage.getItem('asbestipro-edit') === '1';
 
+    // If ?edit=1 in URL, persist to localStorage
     if (editParam) {
+      localStorage.setItem('asbestipro-edit', '1');
+    }
+
+    if (editParam || editStored) {
       const supabase = getSupabaseBrowser();
       supabase.auth.getSession().then(({ data: { session } }) => {
         if (session) {
@@ -54,6 +60,9 @@ export function ContentProvider({
                 setIsAdmin(true);
               }
             });
+        } else {
+          // No session — clear stored edit mode
+          localStorage.removeItem('asbestipro-edit');
         }
       });
     }
