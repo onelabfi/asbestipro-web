@@ -25,10 +25,7 @@ export function PricingPage() {
         <div className="space-y-6">
           {pricingTiers.map((tier, i) => (
             <div key={i} className="bg-[#111b2e] border border-white/5 rounded-xl p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">{tier.area}</h3>
-                <span className="text-blue-500 text-2xl font-bold">{tier.price}</span>
-              </div>
+              <h3 className="text-lg font-semibold mb-4">{tier.area}</h3>
               <div className="flex flex-wrap gap-2">
                 {tier.cities.map(city => (
                   <Link key={city} href={`/${citySlug(city)}`} className="text-xs bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 px-3 py-1.5 rounded-full transition-colors">
@@ -41,11 +38,18 @@ export function PricingPage() {
         </div>
 
         <div className="mt-12 bg-[#111b2e] border border-white/5 rounded-xl p-6">
-          <h3 className="text-lg font-semibold mb-4">Asbestinäyte</h3>
-          <div className="flex items-center justify-between">
-            <Editable id="hinta.sample.desc" defaultContent="Ota näyte itse ja lähetä postitse. Laboratorioanalyysi SEM-EDS elektronimikroskoopilla." page="hinta" as="p" className="text-gray-400 text-sm" />
-            <span className="text-blue-500 text-2xl font-bold shrink-0 ml-4">39,90€ <span className="text-sm text-gray-400">+ alv</span></span>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold">Asbestinäyte</h3>
+            <span className="text-blue-500 text-2xl font-bold">39,90€ <span className="text-sm text-gray-400">+ alv</span></span>
           </div>
+          <Editable id="hinta.sample.desc" defaultContent="Ota näyte itse ja lähetä postitse. Laboratorioanalyysi SEM-EDS elektronimikroskoopilla." page="hinta" as="p" className="text-gray-400 text-sm mb-4" />
+          <a href="https://www.kartoittaja.fi/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 pt-4 border-t border-white/5 group">
+            <img src="/qr-kartoittaja.png" alt="QR: Kartoittaja.fi" className="w-14 h-14 opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div>
+              <p className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Ota ilmainen Kartoittaja.fi avuksi</p>
+              <p className="text-xs text-gray-500 mt-0.5">Skannaa QR puhelimella →</p>
+            </div>
+          </a>
         </div>
 
         <div className="text-center mt-12">
