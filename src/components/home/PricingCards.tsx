@@ -51,6 +51,15 @@ export function PricingCards() {
             <a href="https://kartoittaja.fi" target="_blank" rel="noopener noreferrer" className="block bg-white/5 border border-white/10 hover:bg-white/10 text-white text-center font-medium py-3.5 rounded-lg transition-colors">
               Tilaa näyteanalyysi
             </a>
+
+            {/* Kartoittaja.fi QR */}
+            <a href="https://www.kartoittaja.fi/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 mt-6 pt-6 border-t border-white/5 group">
+              <img src="/qr-kartoittaja.png" alt="QR: Kartoittaja.fi" className="w-16 h-16 opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div>
+                <p className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Ota ilmainen Kartoittaja.fi avuksi</p>
+                <p className="text-xs text-gray-500 mt-0.5">Skannaa QR puhelimella →</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
