@@ -6,38 +6,38 @@ import { ContentProvider } from '@/components/ContentProvider';
 import { Editable } from '@/components/Editable';
 import { EditToolbar } from '@/components/EditToolbar';
 
-const cities: Record<string, { name: string; region: string }> = {
-  helsinki: { name: 'Helsinki', region: 'pääkaupunkiseudulla' },
-  espoo: { name: 'Espoo', region: 'pääkaupunkiseudulla' },
-  vantaa: { name: 'Vantaa', region: 'pääkaupunkiseudulla' },
-  vihti: { name: 'Vihti', region: 'Uudellamaalla' },
-  lohja: { name: 'Lohja', region: 'Uudellamaalla' },
-  kirkkonummi: { name: 'Kirkkonummi', region: 'Uudellamaalla' },
-  klaukkala: { name: 'Klaukkala', region: 'Uudellamaalla' },
-  nurmijarvi: { name: 'Nurmijärvi', region: 'Uudellamaalla' },
-  jarvenpaa: { name: 'Järvenpää', region: 'Uudellamaalla' },
-  sipoo: { name: 'Sipoo', region: 'Uudellamaalla' },
-  kerava: { name: 'Kerava', region: 'Uudellamaalla' },
-  tuusula: { name: 'Tuusula', region: 'Uudellamaalla' },
-  tampere: { name: 'Tampere', region: 'Pirkanmaalla' },
-  turku: { name: 'Turku', region: 'Varsinais-Suomessa' },
-  salo: { name: 'Salo', region: 'Varsinais-Suomessa' },
-  naantali: { name: 'Naantali', region: 'Varsinais-Suomessa' },
-  nokia: { name: 'Nokia', region: 'Pirkanmaalla' },
-  kangasala: { name: 'Kangasala', region: 'Pirkanmaalla' },
-  lempaala: { name: 'Lempäälä', region: 'Pirkanmaalla' },
-  pirkkala: { name: 'Pirkkala', region: 'Pirkanmaalla' },
-  hyvinkaa: { name: 'Hyvinkää', region: 'Uudellamaalla' },
-  riihimaki: { name: 'Riihimäki', region: 'Hämeessä' },
-  porvoo: { name: 'Porvoo', region: 'Uudellamaalla' },
-  lahti: { name: 'Lahti', region: 'Päijät-Hämeessä' },
-  jyvaskyla: { name: 'Jyväskylä', region: 'Keski-Suomessa' },
-  kuopio: { name: 'Kuopio', region: 'Pohjois-Savossa' },
-  oulu: { name: 'Oulu', region: 'Pohjois-Pohjanmaalla' },
-  pori: { name: 'Pori', region: 'Satakunnassa' },
-  lappeenranta: { name: 'Lappeenranta', region: 'Etelä-Karjalassa' },
-  kouvola: { name: 'Kouvola', region: 'Kymenlaaksossa' },
-  hameenlinna: { name: 'Hämeenlinna', region: 'Hämeessä' },
+const cities: Record<string, { name: string; region: string; price: string }> = {
+  helsinki: { name: 'Helsinki', region: 'pääkaupunkiseudulla', price: '119€' },
+  espoo: { name: 'Espoo', region: 'pääkaupunkiseudulla', price: '119€' },
+  vantaa: { name: 'Vantaa', region: 'pääkaupunkiseudulla', price: '119€' },
+  vihti: { name: 'Vihti', region: 'Uudellamaalla', price: '199€' },
+  lohja: { name: 'Lohja', region: 'Uudellamaalla', price: '199€' },
+  kirkkonummi: { name: 'Kirkkonummi', region: 'Uudellamaalla', price: '199€' },
+  klaukkala: { name: 'Klaukkala', region: 'Uudellamaalla', price: '199€' },
+  nurmijarvi: { name: 'Nurmijärvi', region: 'Uudellamaalla', price: '199€' },
+  jarvenpaa: { name: 'Järvenpää', region: 'Uudellamaalla', price: '199€' },
+  sipoo: { name: 'Sipoo', region: 'Uudellamaalla', price: '199€' },
+  kerava: { name: 'Kerava', region: 'Uudellamaalla', price: '199€' },
+  tuusula: { name: 'Tuusula', region: 'Uudellamaalla', price: '199€' },
+  tampere: { name: 'Tampere', region: 'Pirkanmaalla', price: '219€' },
+  turku: { name: 'Turku', region: 'Varsinais-Suomessa', price: '219€' },
+  salo: { name: 'Salo', region: 'Varsinais-Suomessa', price: '219€' },
+  naantali: { name: 'Naantali', region: 'Varsinais-Suomessa', price: '219€' },
+  nokia: { name: 'Nokia', region: 'Pirkanmaalla', price: '219€' },
+  kangasala: { name: 'Kangasala', region: 'Pirkanmaalla', price: '219€' },
+  lempaala: { name: 'Lempäälä', region: 'Pirkanmaalla', price: '219€' },
+  pirkkala: { name: 'Pirkkala', region: 'Pirkanmaalla', price: '219€' },
+  hyvinkaa: { name: 'Hyvinkää', region: 'Uudellamaalla', price: '199€' },
+  riihimaki: { name: 'Riihimäki', region: 'Hämeessä', price: '199€' },
+  porvoo: { name: 'Porvoo', region: 'Uudellamaalla', price: '199€' },
+  lahti: { name: 'Lahti', region: 'Päijät-Hämeessä', price: '239€' },
+  jyvaskyla: { name: 'Jyväskylä', region: 'Keski-Suomessa', price: '239€' },
+  kuopio: { name: 'Kuopio', region: 'Pohjois-Savossa', price: '239€' },
+  oulu: { name: 'Oulu', region: 'Pohjois-Pohjanmaalla', price: '239€' },
+  pori: { name: 'Pori', region: 'Satakunnassa', price: '239€' },
+  lappeenranta: { name: 'Lappeenranta', region: 'Etelä-Karjalassa', price: '239€' },
+  kouvola: { name: 'Kouvola', region: 'Kymenlaaksossa', price: '239€' },
+  hameenlinna: { name: 'Hämeenlinna', region: 'Hämeessä', price: '239€' },
 };
 
 export function generateStaticParams() {
@@ -63,25 +63,21 @@ export default async function CityPage({ params }: { params: { city: string } })
   return (
     <ContentProvider initialContent={content} page={pageId}>
       {/* Hero */}
-      <section className="py-20 sm:py-28 text-center">
+      <section className="py-20 sm:py-32 text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-8">
             Asbestikartoitus {city.name}
           </p>
 
-          <Editable
-            id={`${pageId}.hero.title`}
-            defaultContent={`Asbestikartoitus ${city.name}`}
-            page={pageId}
-            as="h1"
-            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8"
-          />
+          <p className="text-[8rem] sm:text-[10rem] md:text-[12rem] font-bold leading-none text-white tracking-tight">
+            {city.price}
+          </p>
 
-          <Link href="/tilaa" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-10 py-4 rounded-lg transition-colors text-lg">
+          <Link href="/tilaa" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium uppercase tracking-wider px-12 py-4 rounded-lg transition-colors text-base mt-10">
             Tilaa
           </Link>
 
-          <div className="mt-8 flex justify-center gap-6 text-sm text-gray-400">
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 text-sm text-gray-400">
             <a href="mailto:info@asbesti.pro" className="hover:text-white transition-colors">Email: info@asbesti.pro</a>
             <a href="tel:+35845784444444" className="hover:text-white transition-colors">Puh: +358 45 78 444 444</a>
           </div>
