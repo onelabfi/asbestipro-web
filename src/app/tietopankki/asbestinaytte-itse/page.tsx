@@ -31,6 +31,21 @@ export default async function AsbestinayteItse() {
   return (
     <ContentProvider initialContent={content} page="naytte-itse">
       <ArticlePage page="naytte-itse" label="Tietopankki" title="Asbestinäyte itse" sections={sections} />
+
+      {/* Kartoittaja.fi CTA */}
+      <section className="pb-20">
+        <div className="max-w-3xl mx-auto px-4">
+          <a href="https://www.kartoittaja.fi/login" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 bg-[#111b2e] border border-blue-500/20 rounded-2xl p-6 group hover:border-blue-500/40 transition-colors">
+            <img src="/qr-kartoittaja.png" alt="QR: Kartoittaja.fi" className="w-20 h-20 opacity-70 group-hover:opacity-100 transition-opacity" />
+            <div>
+              <p className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">Ota ilmainen Kartoittaja.fi avuksi</p>
+              <p className="text-sm text-gray-400 mt-1">Dokumentoi näytteet, seuraa analyysin etenemistä ja saat raportin sähköpostiin.</p>
+              <p className="text-xs text-blue-500 mt-2">Skannaa QR puhelimella →</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <EditToolbar />
     </ContentProvider>
   );
